@@ -24,10 +24,13 @@ if not os.environ.get("USER_AGENT"):
 
 def main():
     state = {"messages":[],"message_type": None}
-    st.title("ChatBot")
+    st.title("Dual Natured Agent",help="Give logical or emotional reponse based on input")
+
+
 
     user_input = st.chat_input("Ask Anything")
     if(user_input):
+        
           state["messages"] = state.get("messages",[])+[
            {
             "role":"user",
